@@ -1,0 +1,48 @@
+.company {
+  padding: 120px 0;
+}
+
+.company__list {
+  display: flex;
+  gap: 24px;
+}
+
+.company__item {
+  width: 264px;
+}
+
+.company-item-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: var(--color-cloud);
+  border: 1px solid var(--color-light-slate);
+  border-radius: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 8px;
+}
+
+.company-icon {
+  width: 65.32px;
+  height: 70px;
+}
+
+.company__title {
+  color: var(--color-navy-blue);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.company__text {
+  color: var(--color-slate);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 280px;
+}
