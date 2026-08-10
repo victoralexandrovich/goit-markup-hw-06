@@ -83,6 +83,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 
@@ -100,7 +101,7 @@
   border-radius: 4px;
   color: var(--color-white);
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,7 +113,7 @@
 
 .footer__subscribe-input:hover,
 .footer__subscribe-input:focus {
-  border-color: var(--color-iris);
+  border-color: var(--color-green);
 }
 
 .footer__subscribe-button {
@@ -137,7 +138,7 @@
 
 .footer__subscribe-button:hover,
 .footer__subscribe-button:focus {
-  background-color: var(--color-ocean);
+  background-color: var(--color-green);
 }
 
 .footer__subscribe-icon {
