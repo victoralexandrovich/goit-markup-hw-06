@@ -586,7 +586,120 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer__subscribe-wrapper">
+          <p class="footer__subscribe-text">Subscribe</p>
+          <form class="footer__subscribe-form" action="#" method="post">
+            <label class="sr-only" for="footer-email">Email</label>
+            <input
+              class="footer__subscribe-input"
+              type="email"
+              name="user-email"
+              id="footer-email"
+              placeholder="Email"
+            />
+            <button class="footer__subscribe-button" type="submit">
+              Subscribe
+              <svg class="footer__subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <div class="backdrop" id="backdrop">
+      <div class="modal">
+        <button class="modal__close-btn" type="button" aria-label="Close modal">
+          <svg class="modal__close-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal__title">
+          Leave your contacts and we will call you back
+        </p>
+
+        <form class="modal__form" action="#" method="post">
+          <div class="modal__form-group">
+            <label class="modal__label" for="modal-name">Name</label>
+            <div class="modal__input-wrapper">
+              <input
+                class="modal__input"
+                type="text"
+                name="user-name"
+                id="modal-name"
+              />
+              <svg class="modal__input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__form-group">
+            <label class="modal__label" for="modal-phone">Phone</label>
+            <div class="modal__input-wrapper">
+              <input
+                class="modal__input"
+                type="tel"
+                name="user-phone"
+                id="modal-phone"
+              />
+              <svg class="modal__input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__form-group">
+            <label class="modal__label" for="modal-email">Email</label>
+            <div class="modal__input-wrapper">
+              <input
+                class="modal__input"
+                type="email"
+                name="user-email"
+                id="modal-email"
+              />
+              <svg class="modal__input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__form-group">
+            <label class="modal__label" for="modal-comment">Comment</label>
+            <textarea
+              class="modal__textarea"
+              name="comment"
+              id="modal-comment"
+              placeholder="Enter your comment"
+            ></textarea>
+          </div>
+
+          <div class="modal__checkbox-wrapper">
+            <input
+              class="checkbox sr-only"
+              type="checkbox"
+              name="user-privacy-policy"
+              id="modal-checkbox"
+            />
+            <label class="checkbox-label" for="modal-checkbox">
+              <span class="custom-checkbox">
+                <svg class="checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              <span
+                >I accept the terms and conditions of the
+                <a class="modal__privacy-link" href="#">Privacy Policy</a></span
+              >
+            </label>
+          </div>
+
+          <button class="modal__submit-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

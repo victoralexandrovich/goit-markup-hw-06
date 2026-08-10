@@ -1,39 +1,126 @@
-# GoIT homework 4 - WebStudio landing page
+# GoIT homework 5 - WebStudio landing page
 
-WebStudio landing page interactive elements, vector graphics, positioning & animations — HTML/CSS homework assignment #4 for the GoIT course. Focuses on SVG sprites, CSS transitions, absolute positioning, overlays, pseudo-elements, and multi-layer backgrounds.
+WebStudio landing page subscribe form, modal window and custom checkbox —
+HTML/CSS homework assignment #5 for the GoIT course. Focuses on forms,
+modal/backdrop patterns, focus-visible accessibility states, and custom form
+controls.
 
 **What was done:**
-- Created repository `goit-markup-hw-04` using `goit-markup-hw-03` as a Template
-- Set up development workflow with Live Server to ensure correct local SVG sprite fetching (`icons.svg`)
-- Exported and assembled SVG icons into a single sprite using IcoMoon (`images/icons.svg`), rendering them via `<svg>` and `<use>` with explicit dimensions
-- Styled Hero section background with a multi-layered CSS background: linear gradient overlay combined with a centered, non-repeating cover background image (`max-width: 1440px`)
-- Built decorative icon containers for the Features section using Flexbox alignment and custom background/border-radius settings
-- Implemented social network icon lists in the Team and Footer sections with circular interactive containers, smooth hover/focus color shifts using `currentColor`
-- Created active navigation item styling (`.current` / `.active`) with text highlight and decorative underline via positioned `::after` pseudo-element
-- Applied soft box shadows (`box-shadow`) to buttons, Team section cards, and hover states for Portfolio cards
-- Developed sliding text overlay animation for Portfolio project cards: relative parent container with hidden overflow (`overflow: hidden`), absolute overlay positioning with `transform: translateY(100%)`, sliding up to `0%` on card hover
-- Added smooth CSS transitions (`transition: [properties] 250ms cubic-bezier(0.4, 0, 0.2, 1)`) to all interactive state properties (`color`, `background-color`, `box-shadow`, `transform`) on base state selectors
-- Aligned Footer blocks using horizontal margin spacing according to requirements
-- Validated HTML markup via W3C HTML Validator and formatted all files with Prettier
-- Deployed the project on GitHub Pages and updated the live page link in the repository's About section
+
+- Created repository `goit-markup-hw-05` using `goit-markup-hw-04` as a Template
+- Extended `icons.svg` sprite with new icons (send, close, user, phone, email,
+  checkmark) and connected them via `<svg>` + `<use>` with explicit width/height
+- Added a separate `modal.css` file, imported in `main.css` after the general
+  styles
+- Built a Footer subscribe block: descriptive `<p>Subscribe</p>` text placed
+  before the form, an input with proper `name`, `placeholder` and an accessible
+  label (`label`/`aria-label`), and a `type="submit"` button with an SVG send
+  icon colored via `color` on the interactive parent
+- Styled `::placeholder` separately per the Style Guide typography (font-size,
+  line-height, letter-spacing, font-weight, color) and added smooth hover/focus
+  transitions for border, background and color
+- Aligned the subscribe block to the right edge of the Footer container per the
+  layout
+- Implemented a fixed, full-viewport `backdrop` with a semi-transparent
+  background, hidden by default and non-interactive while hidden, toggled via a
+  manually added `.is-open` class (no JavaScript)
+- Centered the modal window inside the backdrop with Flexbox, and set its size,
+  background, border-radius, box-shadow and internal padding directly on the
+  modal element (not on its children)
+- Added a round close button in the top-right corner of the modal with a
+  `type="button"`, SVG cross icon, and hover/focus states that smoothly change
+  background, border and icon color via `currentColor`
+- Built the request form inside the modal with `Name`, `Phone`, `Email`,
+  `Comment` and a Privacy Policy checkbox, each field using the correct `type`,
+  a descriptive `name`, and a separate `label` connected via `for`/`id`
+- For icon fields: wrapped input and SVG in a shared container, positioned the
+  icon absolutely with `top: 50%` + `transform: translateY(-50%)`, added left
+  padding to the input to avoid overlapping the icon, and used an
+  `input:focus + svg` combined selector so the border and icon color change
+  together
+- Set `outline: transparent` on inputs while keeping the focus border color
+  change as a clear visible focus indicator
+- Styled `Comment` as a `textarea` with `resize: none`, matching typography,
+  height, padding and placeholder color from the Style Guide
+- Implemented a custom checkbox: kept the native `input type="checkbox"`
+  visually hidden via the `.sr-only` pattern (not `display: none`), connected to
+  its label via `id`/`for`, with a custom checkbox box, an SVG checkmark (hidden
+  by default via `opacity: 0`) and a `span`-wrapped Privacy Policy link inside
+  the label
+- Styled the `:checked` state using a `.checkbox:checked + .checkbox-label`
+  combined selector to update the custom checkbox background/border and reveal
+  the checkmark (`opacity: 1`), plus a visible `:focus-visible` outline for
+  keyboard navigation
+- Added explicit `transition` properties (`250ms cubic-bezier(0.4, 0, 0.2, 1)`)
+  in the base state for every property that changes on hover, focus,
+  `:focus-visible` and `:checked`, avoiding `transition: all`
+- Verified keyboard accessibility: Tab navigation, visible focus states, and
+  toggling the checkbox with Space
+- Validated HTML markup via W3C HTML Validator and formatted all files with
+  Prettier
+- Deployed the project on GitHub Pages and updated the live page link in the
+  repository's About section
 
 ============================================================================
 
-# Домашнє завдання 4 GoIT — лендінг WebStudio
+# Домашнє завдання 5 GoIT — лендінг WebStudio
 
-Декоративні елементи, векторна графіка, позиціонування та анімації лендінгу WebStudio — домашнє завдання #4 з курсу HTML/CSS від GoIT. Реалізовано SVG-спрайт, CSS-переходи, абсолютне позиціонування, оверлей, псевдоелементи та багатошаровий фон.
+Форма підписки, модальне вікно та кастомний checkbox лендінгу WebStudio —
+домашнє завдання #5 з курсу HTML/CSS від GoIT. Реалізовано форми, паттерн
+backdrop/modal, доступні focus-стани та кастомні елементи форми.
 
 **Що зроблено:**
-- Створено репозиторій `goit-markup-hw-04` на основі шаблону `goit-markup-hw-03`
-- Налаштовано робочий процес із запускa сторінки через Live Server для коректного зчитування локального SVG-спрайту (`icons.svg`)
-- Експортовано векторні іконки та зібрано їх у єдиний SVG-спрайт через IcoMoon (`images/icons.svg`), підключено їх в HTML за допомогою тегів `<svg>` і `<use>` із явним завданням розмірів
-- Оформлено багатошаровий фон секції Hero в CSS: напівпрозорий градієнт поверх відцентрованого фонового зображення без повторів (`max-width: 1440px`)
-- Створено однакові декоративні контейнери для іконок у секції Переваги з центруванням посібником Flexbox та відповідними фонами
-- Додано списки соціальних мереж у секціях Команда та Футер з круглими інтерактивними посиланнями, що змінюють колір іконки через `currentColor` при hover/focus
-- Оформлено активне посилання навігації (`.current` / `.active`) із синім кольором та декоративним підкресленням через псевдоелемент `::after`
-- Налаштовано плавні тіні (`box-shadow`) для кнопок, карток Команди та появу тіні при наведенні на картку Портфоліо
-- Реалізовано виїжджаючий текстовий overlay у картках Портфоліо: батьківський контейнер з `position: relative` та `overflow: hidden`, позиціонування оверлею через `transform: translateY(100%)` із поверненням у `0%` при hover картки
-- Додано плавні CSS-переходи (`transition: [властивості] 250ms cubic-bezier(0.4, 0, 0.2, 1)`) для всіх інтерактивних властивостей (`color`, `background-color`, `box-shadow`, `transform`) у базовому стані елементів
-- Згруповано та вирівняно блоки в Footer за допомогою горизонтальних `margin` відповідно до вимог ДЗ
-- Перевірено відсутність помилок HTML-коду за допомогою валідатора W3C та відформатовано код через Prettier
-- Опубліковано оновлену версію на GitHub Pages, а посилання додано в секцію About репозиторія
+
+- Створено репозиторій `goit-markup-hw-05` на основі шаблону `goit-markup-hw-04`
+- Доповнено SVG-спрайт `icons.svg` новими іконками (відправлення, закриття,
+  користувача, телефону, електронної пошти, галочки), підключено через `<svg>` і
+  `<use>` з явними `width`/`height`
+- Додано окремий файл `modal.css`, підключений у `main.css` після загальних
+  стилів
+- Реалізовано блок підписки у Footer: текст `<p>Subscribe</p>` розташований
+  перед формою (не заголовок), поле з описовим `name`, `placeholder` та
+  доступною назвою через `label`/`aria-label`, кнопка `type="submit"` з іконкою
+  відправлення зі спрайту, колір якої задається через `color` інтерактивного
+  батьківського елемента
+- Стилізовано `::placeholder` окремо відповідно до типографії Style Guide,
+  додано плавні переходи кольору, рамки та фону для поля й кнопки
+- Блок підписки притиснутий до правого краю контейнера Footer відповідно до
+  макета
+- Реалізовано зафіксований на весь viewport `backdrop` з напівпрозорим фоном,
+  прихований за замовчуванням і без перехоплення подій у прихованому стані,
+  керований вручну доданим класом `.is-open` (без JavaScript)
+- Модальне вікно центроване всередині backdrop через Flexbox, розміри, фон,
+  заокруглення, тінь та внутрішні відступи задані безпосередньо на самому
+  модальному вікні, а не на дочірніх елементах
+- Додано круглу кнопку закриття у верхньому правому куті модального вікна з
+  `type="button"`, SVG хрестиком та hover/focus станами, що плавно змінюють фон,
+  рамку і колір іконки через `currentColor`
+- Побудовано форму заявки в модальному вікні з полями `Name`, `Phone`, `Email`,
+  `Comment` та чекбоксом Privacy Policy — кожне поле з правильним `type`,
+  описовим `name` та окремим `label`, пов'язаним через `for`/`id`
+- Для полів з іконками: input і SVG обгорнуті у спільний контейнер, іконка
+  позиціонована абсолютно з `top: 50%` та `transform: translateY(-50%)`, полю
+  додано лівий внутрішній відступ; комбінований селектор `input:focus + svg`
+  одночасно змінює рамку поля та колір іконки
+- Для input задано `outline: transparent`, при цьому зміна кольору рамки
+  залишається чітким індикатором фокусу
+- Поле `Comment` оформлено як `textarea` з `resize: none`, типографією, висотою,
+  відступами та кольором placeholder зі Style Guide
+- Реалізовано кастомний checkbox: нативний `input type="checkbox"` прихований
+  візуально через патерн `.sr-only` (без `display: none`), пов'язаний з `label`
+  через `id`/`for`; усередині label — кастомний елемент чекбоксу, SVG-галочка
+  (прихована за замовчуванням через `opacity: 0`) та текст із посиланням на
+  Privacy Policy у `span`
+- Стан `:checked` оформлено через комбінований селектор
+  `.checkbox:checked + .checkbox-label`, що змінює фон/рамку кастомного чекбоксу
+  та показує галочку (`opacity: 1`), додано помітний `:focus-visible` для
+  навігації з клавіатури
+- Додано явні `transition` (`250ms cubic-bezier(0.4, 0, 0.2, 1)`) у базовому
+  стані для всіх властивостей, що змінюються при hover, focus, `:focus-visible`
+  і `:checked`, без використання `transition: all`
+- Перевірено доступність з клавіатури: навігація Tab, помітний фокус, увімкнення
+  чекбоксу клавішею Space
+- Перевірено відсутність помилок HTML-коду валідатором W3C та відформатовано код
+  через Prettier
+- Опубліковано проєкт на GitHub Pages, посилання додано в секцію About
+  репозиторія
