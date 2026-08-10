@@ -97,7 +97,7 @@
   height: 40px;
   padding-left: 16px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #ffffff;
   border-radius: 4px;
   color: var(--color-white);
   font-size: 12px;
@@ -108,7 +108,7 @@
 }
 
 .footer__subscribe-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 
 .footer__subscribe-input:hover,
