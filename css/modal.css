@@ -24,7 +24,8 @@
 
 .modal {
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 288px;
   min-height: 584px;
   padding: 72px 16px 24px;
   background-color: var(--color-dairy);
@@ -37,7 +38,7 @@
 
 @media (min-width: 768px) {
   .modal {
-    width: 408px;
+    max-width: 408px;
     padding: 72px 24px 24px;
   }
 }

@@ -9,17 +9,7 @@
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
-  margin-bottom: 16px;
-}
-
-.works__title_m {
-  color: var(--color-navy-blue);
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 42px;
+  margin-bottom: 72px;
 }
 
 .gallery__list {

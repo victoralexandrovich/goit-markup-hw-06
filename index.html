@@ -67,24 +67,7 @@
             viewBox="0 0 24 24"
             fill="none"
           >
-            <path
-              d="M2 5H22"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <path
-              d="M2 12H22"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <path
-              d="M2 19H22"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
+            <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
@@ -164,6 +147,7 @@
               <img
                 class="team__image"
                 src="./images/team-01.jpg"
+                srcset="./images/team-01@2x.jpg 2x"
                 alt="photo Mark Guerrero"
                 width="264"
               />
@@ -229,6 +213,7 @@
               <img
                 class="team__image"
                 src="./images/team-02.jpg"
+                srcset="./images/team-02@2x.jpg 2x"
                 alt="photo Tom Ford"
                 width="264"
               />
@@ -294,6 +279,7 @@
               <img
                 class="team__image"
                 src="./images/team-03.jpg"
+                srcset="./images/team-03@2x.jpg 2x"
                 alt="photo Camila Garcia"
                 width="264"
               />
@@ -359,6 +345,7 @@
               <img
                 class="team__image"
                 src="./images/team-04.jpg"
+                srcset="./images/team-04@2x.jpg 2x"
                 alt="photo Daniel Wilson"
                 width="264"
               />
@@ -427,7 +414,6 @@
       <section class="works" id="portfolio">
         <div class="container">
           <h2 class="works__title">Our Portfolio</h2>
-          <p class="works__title_m">Inspect Styles</p>
           <ul class="gallery__list list">
             <li class="gallery__item">
               <a class="gallery__link link" href="#">
@@ -435,6 +421,7 @@
                   <img
                     class="gallery__image"
                     src="./images/portfolio-01.jpg"
+                    srcset="./images/portfolio-01@2x.jpg 2x"
                     alt="Banking App Interface Concept"
                     width="360"
                   />
@@ -455,6 +442,7 @@
                   <img
                     class="gallery__image"
                     src="./images/portfolio-02.jpg"
+                    srcset="./images/portfolio-02@2x.jpg 2x"
                     alt="Cashless Payment"
                     width="360"
                   />
@@ -476,6 +464,7 @@
                   <img
                     class="gallery__image"
                     src="./images/portfolio-03.jpg"
+                    srcset="./images/portfolio-03@2x.jpg 2x"
                     alt="Meditation App"
                     width="360"
                   />
@@ -496,6 +485,7 @@
                   <img
                     class="gallery__image"
                     src="./images/portfolio-04.jpg"
+                    srcset="./images/portfolio-04@2x.jpg 2x"
                     alt="Taxi Service"
                     width="360"
                   />
@@ -516,6 +506,7 @@
                   <img
                     class="gallery__image"
                     src="./images/portfolio-05.jpg"
+                    srcset="./images/portfolio-05@2x.jpg 2x"
                     alt="Screen Illustrations"
                     width="360"
                   />
@@ -537,6 +528,7 @@
                   <img
                     class="gallery__image"
                     src="./images/portfolio-06.jpg"
+                    srcset="./images/portfolio-06@2x.jpg 2x"
                     alt="Online Courses"
                     width="360"
                   />
@@ -644,7 +636,7 @@
       </div>
     </footer>
 
-    <div class="mobile-menu-container" data-mobile-menu>
+    <div class="mobile-menu-container" id="mobile-menu" data-mobile-menu>
       <button
         class="mobile-menu-close-btn"
         type="button"

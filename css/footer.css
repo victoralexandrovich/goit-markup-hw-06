@@ -35,6 +35,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
   width: 268px;
   margin: 0 auto;
 }
@@ -159,11 +160,14 @@
 
 @media (min-width: 768px) {
   .footer-container {
+    max-width: 584px;
+    padding: 0 108px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
     column-gap: 24px;
+    row-gap: 72px;
   }
 
   .footer__logo-wrapper,
@@ -184,6 +188,7 @@
   .footer__subscribe-form {
     flex-direction: row;
     align-items: center;
+    gap: 24px;
   }
 
   .footer__subscribe-input {
@@ -197,8 +202,11 @@
   }
 
   .footer-container {
+    max-width: 1158px;
+    padding: 0 15px;
     flex-wrap: nowrap;
     align-items: flex-start;
+    row-gap: 0;
   }
 
   .footer__logo-wrapper {
