@@ -1,6 +1,6 @@
 .hero {
   background-color: var(--color-navy-blue);
-  padding: 188px 0;
+  padding: 112px 0;
 }
 
 .hero__bg-image {
@@ -14,15 +14,32 @@
     url('../images/hero.jpg');
 }
 
+@media (min-width: 768px) {
+  .hero {
+    padding: 112px 0;
+  }
+
+  .hero__title {
+    max-width: 496px;
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .hero {
+    padding: 188px 0;
+  }
+}
+
 .hero__title {
   color: var(--color-white);
   font-weight: 700;
-  font-size: 56px;
+  font-size: 32px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  max-width: 496px;
-  margin: 0 auto 48px;
+  max-width: 320px;
+  margin: 0 auto 72px;
 }
 
 .hero__button {

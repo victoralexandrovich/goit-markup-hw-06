@@ -24,15 +24,22 @@
 
 .modal {
   position: relative;
-  width: 408px;
+  width: 320px;
   min-height: 584px;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px;
   background-color: var(--color-dairy);
   border-radius: 4px;
   box-shadow:
     0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px;
+  }
 }
 
 .modal__close-btn {

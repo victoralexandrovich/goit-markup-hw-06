@@ -1,6 +1,5 @@
 .header {
   border-bottom: 1px solid var(--color-cornflower);
-  display: flex;
 }
 
 .header-container {
@@ -22,7 +21,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: inline-block;
-  margin-right: 76px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: auto;
 }
 
 .header-nav__logo-black {
@@ -30,8 +31,79 @@
 }
 
 .header-nav__list {
+  display: none;
+}
+
+.header-contacts {
+  display: none;
+}
+
+.header-menu-btn {
   display: flex;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 0;
+}
+
+.header-menu-btn-icon {
+  color: var(--color-navy-blue);
+}
+
+@media (min-width: 768px) {
+  .header-nav__logo-blue {
+    margin-right: 120px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header-nav__list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-menu-btn {
+    display: none;
+  }
+
+  .header-contacts {
+    display: block;
+    font-style: normal;
+    margin-left: auto;
+  }
+
+  .header-contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .header-contacts__link {
+    color: var(--color-slate);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    display: inline-block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media (min-width: 1158px) {
+  .header-contacts__list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-contacts__link {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .header-nav__link {
@@ -65,27 +137,6 @@
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.header-contacts {
-  font-style: normal;
-  margin-left: auto;
-}
-
-.header-contacts__list {
-  display: flex;
-  gap: 40px;
-}
-
-.header-contacts__link {
-  color: var(--color-slate);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts__link:hover,
